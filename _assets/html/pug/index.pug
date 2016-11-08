@@ -1,0 +1,15 @@
+//- load accordion__content into the layout
+extends _wrapper/_layout
+//- define the block of accordion__content to be placed in the extend
+block vars
+	-var pageTitle = 'Home page'
+	-var slug = 'index'
+	-var bodyClass = ''
+
+block content
+	.cx.js-cx(data-behaviour="canvas" data-text="We won a potato|and a little picnic|which is nice")
+		video.source(autoplay width="1280" height="720" muted)
+			source(type="video/mp4" src="/_assets/video/gravity.mp4")
+		canvas.video
+		canvas.player
+		canvas.mask
