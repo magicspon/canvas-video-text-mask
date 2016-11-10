@@ -38,7 +38,7 @@ gulp.task('sass', () => {
 		  }
 		})))
 		.pipe(gulpif(process.env.NODE_ENV !== 'production', sassLint.format()))
-    .pipe(sassLint.failOnError())
+		.pipe(gulpif(process.env.NODE_ENV !== 'production', sassLint.failOnError()))
 		.pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.init()))
 		.pipe(sass({
 			outputStyle: $sass.options.outputStyle,
