@@ -7,9 +7,40 @@ block vars
 	-var bodyClass = ''
 
 block content
-	.cx.js-cx(data-behaviour="canvas" data-text="We won a potato|and a little picnic|which is nice")
-		video.source(autoplay width="1280" height="720" muted)
-			source(type="video/mp4" src="/_assets/video/gravity.mp4")
-		canvas.video
-		canvas.player
-		canvas.mask
+
+
+	.wrapper--slide(data-behaviour="canvas")
+		.slide
+			button.button.slide-btn.slide-btn--prev.js-slide-controls(data-direction="previous")
+				+svg-inline('prev')
+			button.button.slide-btn.slide-btn--next.js-slide-controls(data-direction="next")
+				+svg-inline('next')
+			ul.nav.pager-container.js-pager-container
+			ul.nav.slide__list.js-slide-wrap
+				li.js-slide-item.slide__item
+					img.source.js-source#m0(src="/_assets/images/slide1.jpg" alt="" width="1110" height="630")
+					canvas.mask.js-mask
+					h2.slide__heading.f-brand
+						.slide__heading-wrap.slide__text--1
+							span.t-fill.slide__text What's that
+						.slide__heading-wrap.slide__text--0
+							span.t-fill.slide__text on your head? 
+						.slide__heading-wrap.slide__text--1
+							span.t-fill.slide__text A wig
+				li.js-slide-item.slide__item.is-out-of-view
+					video.source.js-source(autoplay width="1110" height="630" muted loop)
+						source(type="video/mp4" src="/_assets/video/broadchurch.mp4")
+					canvas.mask.js-mask
+					h2.slide__heading.f-brand
+						.slide__heading-wrap.slide__text--1
+							span.t-fill.slide__text Cheers. We've won
+						.slide__heading-wrap.slide__text--0
+							span.t-fill.slide__text Beer Hawk
+				li.js-slide-item.slide__item.is-out-of-view
+					img.source.js-source#m2(src="/_assets/images/slide3.jpg" alt="" width="1110" height="630")
+					canvas.mask.js-mask
+					h2.slide__heading.f-brand
+						.slide__heading-wrap.slide__text--1
+							span.t-fill.slide__text Cheers. We've won
+						.slide__heading-wrap.slide__text--0
+							span.t-fill.slide__text Beer Hawk

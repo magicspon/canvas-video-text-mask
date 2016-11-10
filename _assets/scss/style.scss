@@ -44,6 +44,7 @@ $ie: false;
 @import 'modules/map';
 @import 'modules/video';
 @import 'modules/wysiwyg';
+@import 'modules/slide';
  
 // views, mediaquery stuff 
 // Maximum 3 levels of specificity  
@@ -94,22 +95,3 @@ body:before {
 @import 'views/exceptions';
 
 @import 'print';
-
-video {
-	// visibility: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.cx {
-	position: relative;
-	padding-top: gridCalc(720, 1280)	
-}
-
-
-canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-}

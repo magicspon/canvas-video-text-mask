@@ -16,6 +16,26 @@
   }
 }
 
+.icon--next {
+  width: 22.121px;
+  &:after {
+    padding-bottom: 186.36363636363635%;
+  }
+}
+.icon--prev {
+  width: 22.121px;
+  &:after {
+    padding-bottom: 186.36363636363635%;
+  }
+}
 
 
 
+
+$icon--next-width: 22px;
+$icon--next-height: 41px;
+$icon--next-ratio: 1.8636363636363635;
+
+$icon--prev-width: 22px;
+$icon--prev-height: 41px;
+$icon--prev-ratio: 1.8636363636363635;
